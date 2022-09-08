@@ -35,7 +35,7 @@ resource "aws_subnet" "myTF_private" {
   availability_zone = data.aws_availability_zones.available.names[count.index]
 
   tags = {
-    Name = "Private_${count.index + 1}"
+    Name = "myTF_Private_${count.index + 1}"
   }
 }
 /*=====================================================================*/
@@ -48,7 +48,7 @@ resource "aws_subnet" "myTF_public" {
   availability_zone       = data.aws_availability_zones.available.names[count.index]
   map_public_ip_on_launch = true
   tags = {
-    Name = "Public_${count.index + 1}"
+    Name = "myTF_Public_${count.index + 1}"
   }
 }
 /*=====================================================================*/
